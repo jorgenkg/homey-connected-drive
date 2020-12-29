@@ -1,0 +1,124 @@
+{
+  "id": "no.jorgenkg.connected-drive",
+  "version": "0.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#2366B1",
+  "name": {
+    "en": "BMW Connected Drive"
+  },
+  "description": {
+    "en": "Add support for BMW Connected Drive",
+    "no": "Legg til støtte for BMW Connected Drive"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Jørgen Grimnes",
+    "email": "jorgenkg@yahoo.no"
+  },
+  "drivers": [
+    {
+      "id": "vehicle",
+      "name": {
+        "en": "Vehicle"
+      },
+      "class": "remote",
+      "images": {
+        "large": "/assets/driverimages/large.png",
+        "small": "/assets/driverimages/small.png"
+      },
+      "capabilities": ["button.climate", "button.lock", "button.unlock"],
+      "capabilityOptions": {
+        "button.climate": {
+          "title": { "en": "Climate" }
+        },
+        "button.lock": {
+          "title": { "en": "Lock" }
+        },
+        "button.unlock": {
+          "title": { "en": "Unlock" }
+        }
+      },
+      "pair": [
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "navigation": {
+            "next": "list_devices"
+          },
+          "options": {
+            "title": "Log in to your BMW Connected Drive account"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "BMW Connected Drive account"
+          },
+          "children": [
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "User name"
+              },
+              "value": "john.doe@example.com"
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password"
+              },
+              "value": "secret"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "flow": {
+    "actions": [{
+      "id": "climate",
+      "title": {
+        "en": "HVAC"
+      },
+      "titleFormatted": {
+        "en": "HVAC for [[vin]]"
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "vin",
+          "title": {
+            "en": "VIN number"
+          },
+          "placeholder": { "en": "WBAW123456789"}
+        }
+      ]
+    }]
+  }
+}

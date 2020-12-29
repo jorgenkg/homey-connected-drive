@@ -1,0 +1,21 @@
+name: Pull request
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 12
+    - name: Install packages
+      run: npm ci && npm run prepare --if-present
+    - name: Transpile with Typescript
+      run: npx tsc --build tsconfig.json
+    - name: Run Homey validation
+      run: npx homey app validate -p build -l publish
