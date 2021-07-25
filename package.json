@@ -17,17 +17,17 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "@types/homey": "npm:homey-apps-sdk-v3-types@0.2.2",
-    "@types/node": "^16.4.2",
+    "@types/node": "16.4.2",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
     "changelog-parser": "2.8.0",
-    "eslint": "^7.31.0",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "homey": "^2.20.4",
-    "husky": "^7.0.1",
-    "patch-package": "^6.4.7",
+    "eslint": "7.31.0",
+    "eslint-plugin-sort-imports-es6-autofix": "0.6.0",
+    "homey": "2.20.4",
+    "husky": "7.0.1",
+    "patch-package": "6.4.7",
     "standard-version": "9.3.1",
-    "typescript": "^4.3.5"
+    "typescript": "4.3.5"
   },
   "dependencies": {
     "nodejs-connected-drive": "^3.1.0"
