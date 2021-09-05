@@ -1,4 +1,4 @@
-set timeout 30
+set timeout -1
 spawn make dist
 match_max 1000
 
