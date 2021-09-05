@@ -2,7 +2,7 @@ name: Build and release master
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
       - 'CHANGELOG.md'
       - 'build/.homeychangelog.json'
