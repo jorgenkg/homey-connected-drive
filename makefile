@@ -1,12 +1,11 @@
-# SHELL := /bin/bash
+SHELL := /bin/bash
 
 dist:
-	@set -e -o pipefail
+	@set -eo pipefail
 	npm run clean
 	npm run build
 	rm -rf build/@types build/test
-	cp package-lock.json build/
-	jq 'del(.devDependencies)' package.json > build/package.json
+	cp package*.json build/
 	cd build
 	npm ci --production --ignore-scripts
 	cd ..
