@@ -1,6 +1,6 @@
 {
   "id": "no.jorgenkg.connected-drive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#2366B1",
@@ -34,16 +34,26 @@
         "large": "/assets/driverimages/large.png",
         "small": "/assets/driverimages/small.png"
       },
-      "capabilities": ["button.climate", "button.lock", "button.unlock"],
+      "capabilities": [
+        "button.climate",
+        "button.lock",
+        "button.unlock"
+      ],
       "capabilityOptions": {
         "button.climate": {
-          "title": { "en": "Climate" }
+          "title": {
+            "en": "Climate"
+          }
         },
         "button.lock": {
-          "title": { "en": "Lock" }
+          "title": {
+            "en": "Lock"
+          }
         },
         "button.unlock": {
-          "title": { "en": "Unlock" }
+          "title": {
+            "en": "Unlock"
+          }
         }
       },
       "pair": [
@@ -101,24 +111,28 @@
     }
   ],
   "flow": {
-    "actions": [{
-      "id": "climate",
-      "title": {
-        "en": "HVAC"
-      },
-      "titleFormatted": {
-        "en": "HVAC for [[vin]]"
-      },
-      "args": [
-        {
-          "type": "text",
-          "name": "vin",
-          "title": {
-            "en": "VIN number"
-          },
-          "placeholder": { "en": "WBAW123456789"}
-        }
-      ]
-    }]
+    "actions": [
+      {
+        "id": "climate",
+        "title": {
+          "en": "HVAC"
+        },
+        "titleFormatted": {
+          "en": "HVAC for [[vin]]"
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "vin",
+            "title": {
+              "en": "VIN number"
+            },
+            "placeholder": {
+              "en": "WBAW123456789"
+            }
+          }
+        ]
+      }
+    ]
   }
 }
