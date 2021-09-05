@@ -9,4 +9,4 @@ dist:
 	cd build
 	npm ci --production --ignore-scripts
 	cd ..
-	cat <(yes y | head -n 1) <(yes n | head -n 1) | npm run homey-publish
+	cat <(yes n | head -n 1) | npm run homey-publish
