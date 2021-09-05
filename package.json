@@ -11,16 +11,17 @@
     "homey-validate": "npx homey app validate -p build -l publish",
     "homey-publish": "npx homey app publish -p build",
     "build": "npx tsc --build tsconfig.prod.json",
-    "dist": "npm run clean && npm run build && rm -rf build/@types build/test && cp package-lock.json build/ && jq 'del(.scripts) | del(.devDependencies)' package.json > build/package.json && npm ci --production --prefix build && npm run homey-publish"
+    "dist": "make dist"
   },
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "@types/homey": "npm:homey-apps-sdk-v3-types@0.2.2",
-    "@types/node": "16.4.2",
+    "@types/node": "16.7.10",
     "@typescript-eslint/eslint-plugin": "4.30.0",
     "@typescript-eslint/parser": "4.30.0",
     "changelog-parser": "2.8.0",
+    "commitlint": "^13.1.0",
     "eslint": "7.32.0",
     "eslint-plugin-sort-imports-es6-autofix": "0.6.0",
     "homey": "2.21.0",
