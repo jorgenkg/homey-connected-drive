@@ -78,8 +78,8 @@ jobs:
         echo "* Created .athom-cli/settings.json file."
     - name: Install expect
       run: |
-        apt-get update
-        apt-get install -y expect
+        sudo apt-get update
+        sudo apt-get install -y expect
     - name: Install packages
       run: npm ci && npm run prepare --if-present
     - name: Tag release, bump Homey versioning, push to Github and deploy to Homey App store
