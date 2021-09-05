@@ -1,4 +1,4 @@
-name: Build and release master
+name: Build and release main
 
 on:
   push:
@@ -85,7 +85,7 @@ jobs:
         git config --local user.name "Github Actions"
         git config --local user.email "github-actions@example.com"
 
-        git pull origin master
+        git pull origin main
 
         npx standard-version
 
@@ -104,6 +104,6 @@ jobs:
         git commit --amend -m "chore(release): $UPDATED_VERSION"
         git tag -fa "v$UPDATED_VERSION" -m "chore(release): $UPDATED_VERSION"
 
-        git push --tags origin master
+        git push --tags origin main
 
         npm run dist
