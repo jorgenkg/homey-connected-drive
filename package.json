@@ -6,11 +6,7 @@
     "node": ">=12.16.1"
   },
   "scripts": {
-    "clean": "rm -rf build/@types build/drivers build/enums build/test build/app.js build/package*.json",
     "prepare": "npx husky install && npx patch-package",
-    "homey-validate": "npx homey app validate -p build -l publish",
-    "homey-publish": "npx homey app publish -p build",
-    "build": "npx tsc --build tsconfig.prod.json",
     "dist": "make dist"
   },
   "devDependencies": {

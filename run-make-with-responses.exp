@@ -1,0 +1,17 @@
+#!/usr/local/bin/expect -f
+
+set timeout 30
+spawn make dist
+match_max 1000
+
+expect -exact "\[32m?\[39m \[1mNot all node modules are installed. Are you sure you want to continue?\[22m\[0m \[0m\[2m(y/N) \[22m\[79D\[79C"
+send -- "y"
+expect -exact "\[2K\[G\[32m?\[39m \[1mNot all node modules are installed. Are you sure you want to continue?\[22m\[0m \[0m\[2m(y/N) \[22my\[80D\[80C"
+send -- "\r"
+
+expect "\[32m?\[39m \[1mDo you want to update your app's version number? (current *)\[22m\[0m \[0m\[2m(Y/n) \[22m\[74D\[74C"
+send -- "n"
+expect "\[2K\[G\[32m?\[39m \[1mDo you want to update your app's version number? (current *)\[22m\[0m \[0m\[2m(Y/n) \[22mn\[75D\[75C"
+send -- "\r"
+
+expect eof
