@@ -10,14 +10,14 @@
     "dist": "make dist"
   },
   "devDependencies": {
-    "@commitlint/cli": "15.0.0",
-    "@commitlint/config-conventional": "15.0.0",
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1",
     "@types/homey": "npm:homey-apps-sdk-v3-types@0.3.0",
     "@types/node": "16.11.26",
     "@typescript-eslint/eslint-plugin": "5.15.0",
     "@typescript-eslint/parser": "5.15.0",
     "changelog-parser": "2.8.1",
-    "commitlint": "15.0.0",
+    "commitlint": "16.2.3",
     "eslint": "8.11.0",
     "eslint-plugin-sort-imports-es6-autofix": "0.6.0",
     "homey": "2.28.1",
