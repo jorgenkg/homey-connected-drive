@@ -20,7 +20,7 @@
     "commitlint": "16.3.0",
     "eslint": "8.33.0",
     "eslint-plugin-sort-imports-es6-autofix": "0.6.0",
-    "homey": "2.31.0",
+    "homey": "2.32.0",
     "husky": "7.0.4",
     "patch-package": "6.5.1",
     "standard-version": "9.5.0",
