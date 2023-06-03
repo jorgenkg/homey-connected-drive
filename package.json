@@ -18,7 +18,7 @@
     "@typescript-eslint/parser": "5.59.8",
     "changelog-parser": "2.8.1",
     "commitlint": "16.3.0",
-    "eslint": "8.41.0",
+    "eslint": "8.42.0",
     "eslint-plugin-sort-imports-es6-autofix": "0.6.0",
     "homey": "2.34.0",
     "husky": "7.0.4",
