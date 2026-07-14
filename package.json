@@ -23,7 +23,7 @@
     "homey": "2.34.0",
     "husky": "7.0.4",
     "patch-package": "6.5.1",
-    "standard-version": "9.5.0",
+    "commit-and-tag-version": "9.5.0",
     "typescript": "4.9.5"
   },
   "dependencies": {
